@@ -1,5 +1,6 @@
 import math
 
+# find sum of an array/list. Diffculty: Easy
 def sum(A):
     if not A:
         return 0
@@ -10,6 +11,7 @@ def sum(A):
 
 # print(sum([1,2,3]))
 
+# find Minimum of an array. Diffculty: Easy
 def basicMin(A, currMin):
     if not A:
         return currMin
@@ -17,7 +19,7 @@ def basicMin(A, currMin):
         currMin=A[0]
     return basicMin(A[1:],currMin)
 
-# optimized version
+# optimized version of finding min. Diffculty: Easy
 def findMin(A, l, r):
     if l==r:
         return A[r]
@@ -28,7 +30,7 @@ def findMin(A, l, r):
 
 # print( findMin([3,1,2]))
 
-# checks if a string is a palindrom
+# checks if a string is a palindrom. Diffculty: medium
 def isPali(text):
     if len(text)<= 1:
         return 1
@@ -40,6 +42,7 @@ def isPali(text):
 
 # print(  isPali('ssws') )
 
+# reverse a list recursivly. Diffculty: Medium.
 def reverseList(A,rev):
     if not A:
         return
@@ -50,7 +53,7 @@ def reverseList(A,rev):
 # reverseList([3,2,1],rev)
 # print(rev)
 
-# find a subsets of a set
+# find a subsets of a set. Diffculty: Hard
 def print_set(subset):
     temp = []
     for x in subset:
@@ -73,25 +76,3 @@ def helper(given_array, subset, i):
 
 all_subsets([1,2])
 
-def sumSubset(arr):
-    sum=0
-    for x in arr:
-        if x != None:
-            sum=sum+x
-    return sum
-def staircase(N):
-    subset = [None]*N
-    helper2(N, subset, 0)
-def helper2(N, subset,i):
-    l = r =0
-    if i == N:
-        return 0
-    if sumSubset(subset)==N:
-        return 1
-    subset[i]=1
-    l = helper2(N, subset, i+1) 
-    subset[i]=2
-    r = helper2(N, subset, i+1)
-    return l+r
-
-# print(staircase(4))
