@@ -30,6 +30,15 @@ def findMin(A, l, r):
 
 # print( findMin([3,1,2]))
 
+# find fibonacci number. Diffculty: Easy
+def febonaci(a):
+    if(a<=1):
+        return 1
+    else:
+        return a + febonaci(a-1)
+
+# print(f"febo of: {3} is {febonaci(3)}")
+
 # checks if a string is a palindrom. Diffculty: medium
 def isPali(text):
     if len(text)<= 1:
